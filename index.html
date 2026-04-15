@@ -44,20 +44,27 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: 160px;
+      min-height: 180px;
     }
 
-    /* LEFT SIDE WITH LOGO */
+    /* LEFT SIDE WITH PHOTO + LOGO */
     .logo-row {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .logo-row img {
+    .profile-pic {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+    }
+
+    .rowan-logo {
       height: 55px;
-      /* 如果logo是黑色可以打开下面这行 */
-      /* filter: brightness(0) invert(1); */
     }
 
     .dept-text {
@@ -156,6 +163,22 @@
         align-items: flex-start;
         gap: 24px;
       }
+
+      .nav {
+        padding: 12px 30px;
+      }
+
+      .nav a {
+        display: inline-block;
+        margin-right: 18px;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .topbar {
+        padding: 10px 20px;
+        line-height: 1.8;
+      }
     }
   </style>
 </head>
@@ -172,12 +195,10 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- ===== HEADER WITH LOGO ===== -->
   <div class="header">
-
-    <!-- LEFT: LOGO + TEXT -->
     <div class="logo-row">
-      <img src="rowan_logo.png" alt="Rowan University Logo">
+      <img src="Guansheng_Li.jpg" class="profile-pic" alt="Guansheng Li">
+      <img src="rowan_logo.png" class="rowan-logo" alt="Rowan University Logo">
 
       <div class="dept-text">
         <div class="dept-small">Department of</div>
@@ -186,12 +207,10 @@
       </div>
     </div>
 
-    <!-- RIGHT -->
     <div class="header-right">
       <h1>MBCAI Lab</h1>
       <p>Multiscale Biological Computation and AI</p>
     </div>
-
   </div>
 
   <div class="nav">
