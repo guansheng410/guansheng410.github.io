@@ -13,6 +13,10 @@
       color: #222;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     /* ===== TOP BAR ===== */
     .topbar {
       background-color: #222;
@@ -22,7 +26,17 @@
       text-align: center;
     }
 
-    /* ===== HEADER (NEW STYLE) ===== */
+    .topbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .topbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== HEADER ===== */
     .header {
       background-color: #425062;
       color: white;
@@ -80,6 +94,10 @@
       font-weight: bold;
     }
 
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
     /* ===== CONTENT ===== */
     .container {
       max-width: 1100px;
@@ -96,6 +114,7 @@
     h3 {
       font-size: 30px;
       margin-top: 30px;
+      margin-bottom: 15px;
     }
 
     p {
@@ -105,6 +124,7 @@
 
     .section {
       margin-bottom: 50px;
+      scroll-margin-top: 80px;
     }
 
     .card {
@@ -120,6 +140,23 @@
       .header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 24px;
+      }
+
+      .nav {
+        padding: 12px 30px;
+      }
+
+      .nav a {
+        display: inline-block;
+        margin-right: 18px;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .topbar {
+        padding: 10px 20px;
+        line-height: 1.8;
       }
     }
   </style>
@@ -128,32 +165,35 @@
 <body>
 
   <div class="topbar">
-    Home | Research | Publications | Team | Teaching | Opening | Contact
+    <a href="#home">Home</a> |
+    <a href="#research">Research</a> |
+    <a href="#publications">Publications</a> |
+    <a href="#team">Team</a> |
+    <a href="#teaching">Teaching</a> |
+    <a href="#openings">Openings</a> |
+    <a href="#contact">Contact</a>
   </div>
 
-  <!-- ===== HEADER UPDATED ===== -->
   <div class="header">
-
-    <!-- LEFT SIDE -->
     <div class="header-left">
       <div class="dept-small">Department of</div>
       <div class="dept-main">Mathematics</div>
       <div>Rowan University</div>
     </div>
 
-    <!-- RIGHT SIDE -->
     <div class="header-right">
       <h1>MBCAI Lab</h1>
       <p>Multiscale Biological Computation and AI</p>
     </div>
-
   </div>
 
   <div class="nav">
     <a href="#home">Home</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
+    <a href="#team">Team</a>
     <a href="#teaching">Teaching</a>
+    <a href="#openings">Openings</a>
     <a href="#contact">Contact</a>
   </div>
 
@@ -187,7 +227,6 @@
         <p><strong>Biomedical AI</strong></p>
         <p>AI-based image analysis for microfluidic assays and biomedical applications.</p>
       </div>
-
     </section>
 
     <section id="publications" class="section">
@@ -200,13 +239,27 @@
       <div class="card">
         <p>Li, G. et al. Physics-informed and multiscale modeling for blood flow and cellular systems.</p>
       </div>
+    </section>
 
+    <section id="team" class="section">
+      <h3>Team</h3>
+      <p>
+        Information about current students, collaborators, and lab members will be posted here.
+      </p>
     </section>
 
     <section id="teaching" class="section">
       <h3>Teaching</h3>
       <p>
         This section can include courses, teaching materials, lecture notes, and mentoring activities.
+      </p>
+    </section>
+
+    <section id="openings" class="section">
+      <h3>Openings</h3>
+      <p>
+        We welcome motivated students and collaborators interested in multiscale modeling,
+        scientific machine learning, and biomedical computation.
       </p>
     </section>
 
