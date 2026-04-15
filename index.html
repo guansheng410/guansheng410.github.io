@@ -3,296 +3,402 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guansheng Li</title>
-
+  <title>MBCAI Lab | Guansheng Li</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
-      color: #222;
+    * {
+      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
     }
 
-    /* ===== TOP BAR ===== */
-    .topbar {
-      background-color: #222;
-      color: white;
-      padding: 10px 40px;
-      font-size: 14px;
-      text-align: center;
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
     }
 
-    .topbar a {
-      color: white;
+    a {
       text-decoration: none;
-      margin: 0 8px;
     }
 
-    .topbar a:hover {
-      text-decoration: underline;
+    /* ===== TOP HEADER ===== */
+    .site-header {
+      background: #f7f7f7;
+      border-bottom: 1px solid #ddd;
+      padding: 18px 60px 14px 60px;
     }
 
-    /* ===== HEADER ===== */
-    .header {
-      background-color: #243447;
-      color: white;
-      padding: 40px 60px;
+    .header-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: 180px;
-    }
-
-    /* LEFT SIDE WITH PHOTO + LOGO */
-    .logo-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
-    .profile-pic {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid white;
+    .site-title {
+      font-size: 28px;
+      font-weight: 500;
+      color: #222;
     }
 
-    .rowan-logo {
-      height: 80px;
+    .site-title .school {
+      color: #8c1515;
+      font-size: 34px;
+      font-family: Georgia, "Times New Roman", serif;
+      margin-right: 6px;
     }
 
-    .dept-text {
-      line-height: 1.3;
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #d0d0d0;
+      border-radius: 24px;
+      padding: 0 14px;
+      min-width: 290px;
+      height: 42px;
     }
 
-    .dept-small {
+    .search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
       font-size: 16px;
-      font-style: italic;
+      background: transparent;
     }
 
-    .dept-main {
-      font-size: 26px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    /* RIGHT SIDE */
-    .header-right {
-      text-align: left;
-      max-width: 600px;
-    }
-
-    .header-right h1 {
-      margin: 0;
-      font-size: 48px;
-      color: #f4c542;
-    }
-
-    .header-right p {
-      margin-top: 10px;
-      font-size: 22px;
-      color: #f7d978;
-      font-style: italic;
-    }
-
-    /* ===== NAV ===== */
-    .nav {
-      background-color: #d96f24;
-      padding: 12px 60px;
-    }
-
-    .nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 30px;
+    .search-icon {
+      color: #8c1515;
       font-size: 20px;
       font-weight: bold;
+      margin-left: 8px;
     }
 
-    .nav a:hover {
-      text-decoration: underline;
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 34px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .top-nav a {
+      color: #8c1515;
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 10px;
+      position: relative;
+    }
+
+    .top-nav a.active {
+      color: #222;
+    }
+
+    .top-nav a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 5px;
+      background: #444;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 520px;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('hero_lab.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 48px 38px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.96);
+      width: 440px;
+      padding: 34px 36px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+    }
+
+    .hero-card h1 {
+      margin: 0 0 18px 0;
+      font-size: 30px;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .hero-card p {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #333;
+      font-weight: 600;
+    }
+
+    /* ===== INTRO ===== */
+    .intro {
+      background: #f4f4f4;
+      text-align: center;
+      padding: 56px 22px 70px 22px;
+    }
+
+    .intro h2 {
+      margin: 0 0 22px 0;
+      font-size: 38px;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .intro p {
+      max-width: 980px;
+      margin: 0 auto;
+      font-size: 24px;
+      line-height: 1.7;
+      color: #222;
     }
 
     /* ===== CONTENT ===== */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      background: white;
-      padding: 40px;
-    }
-
-    h2 {
-      font-size: 42px;
-      margin-bottom: 30px;
-    }
-
-    h3 {
-      font-size: 30px;
-      margin-top: 30px;
-      margin-bottom: 15px;
-    }
-
-    p {
-      font-size: 20px;
-      line-height: 1.8;
-    }
-
     .section {
-      margin-bottom: 50px;
-      scroll-margin-top: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 28px;
     }
 
-    .card {
-      background: #f8f8f8;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
+    .section h3 {
+      font-size: 30px;
+      margin: 0 0 24px 0;
+      color: #222;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
       margin-top: 20px;
     }
 
+    .card {
+      background: white;
+      border: 1px solid #e2e2e2;
+      padding: 28px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+
+    .card h4 {
+      margin: 0 0 14px 0;
+      font-size: 22px;
+      color: #8c1515;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .contact-list {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border: 1px solid #e2e2e2;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+
+    .contact-list p {
+      font-size: 19px;
+      line-height: 1.8;
+      margin: 10px 0;
+    }
+
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
+    @media (max-width: 1000px) {
+      .cards {
+        grid-template-columns: 1fr;
       }
 
-      .nav {
-        padding: 12px 30px;
+      .intro p {
+        font-size: 21px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding: 18px 22px 14px 22px;
       }
 
-      .nav a {
-        display: inline-block;
-        margin-right: 18px;
-        margin-bottom: 10px;
-        font-size: 18px;
+      .site-title {
+        font-size: 22px;
       }
 
-      .topbar {
-        padding: 10px 20px;
-        line-height: 1.8;
+      .site-title .school {
+        font-size: 28px;
+      }
+
+      .search-box {
+        min-width: 100%;
+      }
+
+      .hero {
+        min-height: 430px;
+        padding: 24px 18px;
+      }
+
+      .hero-card {
+        width: 100%;
+        padding: 24px;
+      }
+
+      .hero-card h1 {
+        font-size: 26px;
+      }
+
+      .intro h2 {
+        font-size: 30px;
+      }
+
+      .intro p {
+        font-size: 19px;
       }
     }
   </style>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="header-top">
+      <div class="site-title">
+        <span class="school">Rowan</span> | MBCAI Lab
+      </div>
 
-  <div class="topbar">
-    <a href="#home">Home</a> |
-    <a href="#research">Research</a> |
-    <a href="#publications">Publications</a> |
-    <a href="#team">Team</a> |
-    <a href="#teaching">Teaching</a> |
-    <a href="#openings">Openings</a> |
-    <a href="#contact">Contact</a>
-  </div>
-
-  <div class="header">
-    <div class="logo-row">
-      <img src="Guansheng_Li.jpg" class="profile-pic" alt="Guansheng Li">
-      <img src="Rowan.jpg" class="rowan-logo" alt="Rowan University Logo">
-
-      <div class="dept-text">
-        <div class="dept-small">Department of</div>
-        <div class="dept-main">Mathematics</div>
-        <div>Rowan University</div>
+      <div class="search-box">
+        <input type="text" placeholder="Search this site" />
+        <span class="search-icon">⌕</span>
       </div>
     </div>
 
-    <div class="header-right">
-      <h1>MBCAI Lab</h1>
-      <p>Multiscale Biological Computation and AI</p>
+    <nav class="top-nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#people">People</a>
+      <a href="#news">News</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#photos">Lab Photos</a>
+      <a href="#join">Join</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-card">
+      <h1>Welcome to the research group website of Professor Guansheng Li</h1>
+      <p>
+        Our research develops mathematically grounded and computationally efficient
+        frameworks for multiscale biological systems, integrating applied mathematics,
+        scientific machine learning, computation, and AI for biomedical discovery.
+      </p>
     </div>
-  </div>
+  </section>
 
-  <div class="nav">
-    <a href="#home">Home</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#team">Team</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#openings">Openings</a>
-    <a href="#contact">Contact</a>
-  </div>
+  <section class="intro">
+    <h2>Multiscale Biological Computation and AI Laboratory</h2>
+    <p>
+      By combining analytical modeling, scientific machine learning, multiscale simulation,
+      and biomedical data analysis, we study blood flow, red blood cell biomechanics,
+      disease-related dynamics, and interpretable predictive models for biological systems.
+    </p>
+  </section>
 
-  <div class="container">
-
-    <section id="home" class="section">
-      <h2>Home</h2>
-      <h3>Welcome</h3>
-      <p>
-        Welcome to the MBCAI Lab. My research lies at the interface of applied mathematics,
-        scientific machine learning, computational science, and biomedicine.
-        I focus on multiscale modeling, blood flow and red blood cell biomechanics,
-        and AI-driven biomedical simulations.
-      </p>
-    </section>
-
-    <section id="research" class="section">
-      <h3>Research</h3>
-
+  <section class="section" id="research">
+    <h3>Research</h3>
+    <div class="cards">
       <div class="card">
-        <p><strong>Scientific Machine Learning</strong></p>
-        <p>Physics-informed neural networks, operator learning, and data-driven scientific computing.</p>
+        <h4>Scientific Machine Learning</h4>
+        <p>Physics-informed neural networks, operator learning, and data-driven computational frameworks for biological systems.</p>
       </div>
-
       <div class="card">
-        <p><strong>Blood Flow and RBC Biomechanics</strong></p>
-        <p>Computational modeling of blood flow, red blood cell mechanics, and sickle cell disease.</p>
+        <h4>Multiscale Biological Modeling</h4>
+        <p>Multiscale modeling of cells, tissues, and flows using mathematically grounded and computationally efficient approaches.</p>
       </div>
-
       <div class="card">
-        <p><strong>Biomedical AI</strong></p>
-        <p>AI-based image analysis for microfluidic assays and biomedical applications.</p>
+        <h4>Blood Flow and RBC Biomechanics</h4>
+        <p>Hemodynamics, red blood cell mechanics, sickle cell disease, and predictive biomedical simulations.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="publications" class="section">
-      <h3>Selected Publications</h3>
-
+  <section class="section" id="publications">
+    <h3>Publications</h3>
+    <div class="cards">
       <div class="card">
-        <p>Li, G. et al. AI-enabled quantification of overlapping red blood cell sickling dynamics in microfluidic assays.</p>
+        <h4>Selected Paper 1</h4>
+        <p>AI-enabled quantification of overlapping red blood cell sickling dynamics in microfluidic assays.</p>
       </div>
-
       <div class="card">
-        <p>Li, G. et al. Physics-informed and multiscale modeling for blood flow and cellular systems.</p>
+        <h4>Selected Paper 2</h4>
+        <p>Physics-informed and multiscale modeling for blood flow and cellular systems.</p>
       </div>
-    </section>
+      <div class="card">
+        <h4>Selected Paper 3</h4>
+        <p>Additional publications, preprints, and collaborative work can be listed here.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="team" class="section">
-      <h3>Team</h3>
-      <p>Information about students and collaborators will be updated soon.</p>
-    </section>
+  <section class="section" id="people">
+    <h3>People</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Guansheng Li</h4>
+        <p>Principal Investigator, Department of Mathematics, Rowan University.</p>
+      </div>
+      <div class="card">
+        <h4>Students</h4>
+        <p>Information about current students, postdocs, and collaborators will be updated here.</p>
+      </div>
+      <div class="card">
+        <h4>Collaborators</h4>
+        <p>Cross-disciplinary collaborations in applied mathematics, biomedicine, and scientific AI.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="teaching" class="section">
-      <h3>Teaching</h3>
-      <p>Courses, lecture notes, and mentoring activities.</p>
-    </section>
+  <section class="section" id="news">
+    <h3>News</h3>
+    <div class="contact-list">
+      <p>• The MBCAI Lab website is under development.</p>
+      <p>• Openings for students interested in scientific machine learning and biomedical computation.</p>
+      <p>• Updates on publications, grants, and talks will be posted here.</p>
+    </div>
+  </section>
 
-    <section id="openings" class="section">
-      <h3>Openings</h3>
-      <p>
-        We are actively recruiting students interested in scientific machine learning,
-        multiscale modeling, and biomedical computation.
-      </p>
-    </section>
+  <section class="section" id="teaching">
+    <h3>Teaching</h3>
+    <div class="contact-list">
+      <p>Course information, lecture materials, and mentoring activities will be shared here.</p>
+    </div>
+  </section>
 
-    <section id="contact" class="section">
-      <h3>Contact</h3>
-      <p>Email: your_email_here</p>
-      <p>GitHub: your_github_link_here</p>
-      <p>Google Scholar: your_google_scholar_link_here</p>
-    </section>
+  <section class="section" id="photos">
+    <h3>Lab Photos</h3>
+    <div class="contact-list">
+      <p>You can later add lab photos, group pictures, conference snapshots, and outreach images here.</p>
+    </div>
+  </section>
 
-  </div>
-
+  <section class="section" id="join">
+    <h3>Join</h3>
+    <div class="contact-list">
+      <p>We welcome motivated students and collaborators interested in multiscale modeling, scientific machine learning, and biomedical applications.</p>
+      <p>Please contact: your_email_here</p>
+    </div>
+  </section>
 </body>
 </html>
