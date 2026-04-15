@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Guansheng Li</title>
+
   <style>
     body {
       margin: 0;
@@ -12,6 +13,7 @@
       color: #222;
     }
 
+    /* ===== TOP BAR ===== */
     .topbar {
       background-color: #222;
       color: white;
@@ -20,37 +22,65 @@
       text-align: center;
     }
 
+    /* ===== HEADER (NEW STYLE) ===== */
     .header {
-      background-color: #3f4d61;
+      background-color: #425062;
       color: white;
-      padding: 50px 40px;
+      padding: 40px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 160px;
     }
 
-    .header h1 {
+    .header-left {
+      line-height: 1.4;
+    }
+
+    .header-left .dept-small {
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    .header-left .dept-main {
+      font-size: 26px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .header-right {
+      text-align: left;
+      max-width: 600px;
+    }
+
+    .header-right h1 {
       margin: 0;
       font-size: 48px;
       color: #f4c542;
     }
 
-    .header p {
+    .header-right p {
       margin-top: 10px;
-      font-size: 24px;
+      font-size: 22px;
       color: #f7d978;
+      font-style: italic;
     }
 
+    /* ===== NAV ===== */
     .nav {
       background-color: #d96f24;
-      padding: 15px 40px;
+      padding: 12px 60px;
     }
 
     .nav a {
       color: white;
       text-decoration: none;
       margin-right: 30px;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
     }
 
+    /* ===== CONTENT ===== */
     .container {
       max-width: 1100px;
       margin: 0 auto;
@@ -59,17 +89,17 @@
     }
 
     h2 {
-      font-size: 48px;
+      font-size: 42px;
       margin-bottom: 30px;
     }
 
     h3 {
-      font-size: 34px;
+      font-size: 30px;
       margin-top: 30px;
     }
 
     p {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 1.8;
     }
 
@@ -80,22 +110,43 @@
     .card {
       background: #f8f8f8;
       border: 1px solid #ddd;
-      border-radius: 12px;
+      border-radius: 10px;
       padding: 20px;
       margin-top: 20px;
     }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <div class="topbar">
     Home | Research | Publications | Teaching | Contact
   </div>
 
-
+  <!-- ===== HEADER UPDATED ===== -->
   <div class="header">
-    <h1>Guansheng Li</h1>
-    <p>Department of Mathematics</p>
+
+    <!-- LEFT SIDE -->
+    <div class="header-left">
+      <div class="dept-small">Department of</div>
+      <div class="dept-main">Mathematics</div>
+      <div>Rowan University</div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="header-right">
+      <h1>MBCAI Lab</h1>
+      <p>Multiscale Biological Computation and AI</p>
+    </div>
+
   </div>
 
   <div class="nav">
@@ -107,41 +158,49 @@
   </div>
 
   <div class="container">
+
     <section id="home" class="section">
       <h2>Home</h2>
       <h3>Welcome</h3>
       <p>
-        Welcome to my personal research homepage. My research lies at the interface of
-        applied mathematics, scientific machine learning, computational science, and biomedicine.
-        I am interested in multiscale modeling, blood flow and red blood cell biomechanics,
-        physics-informed learning, and AI for biomedical image analysis.
+        Welcome to the MBCAI Lab. My research lies at the interface of applied mathematics,
+        scientific machine learning, computational science, and biomedicine.
+        I focus on multiscale modeling, blood flow and red blood cell biomechanics,
+        and AI-driven biomedical simulations.
       </p>
     </section>
 
     <section id="research" class="section">
       <h3>Research</h3>
+
       <div class="card">
         <p><strong>Scientific Machine Learning</strong></p>
         <p>Physics-informed neural networks, operator learning, and data-driven scientific computing.</p>
       </div>
+
       <div class="card">
         <p><strong>Blood Flow and RBC Biomechanics</strong></p>
         <p>Computational modeling of blood flow, red blood cell mechanics, and sickle cell disease.</p>
       </div>
+
       <div class="card">
         <p><strong>Biomedical AI</strong></p>
         <p>AI-based image analysis for microfluidic assays and biomedical applications.</p>
       </div>
+
     </section>
 
     <section id="publications" class="section">
       <h3>Selected Publications</h3>
+
       <div class="card">
         <p>Li, G. et al. AI-enabled quantification of overlapping red blood cell sickling dynamics in microfluidic assays.</p>
       </div>
+
       <div class="card">
         <p>Li, G. et al. Physics-informed and multiscale modeling for blood flow and cellular systems.</p>
       </div>
+
     </section>
 
     <section id="teaching" class="section">
@@ -157,6 +216,7 @@
       <p>GitHub: your_github_link_here</p>
       <p>Google Scholar: your_google_scholar_link_here</p>
     </section>
+
   </div>
 
 </body>
