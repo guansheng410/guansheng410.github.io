@@ -196,10 +196,12 @@
     }
 
     .section h3 {
-      font-size: 30px;
-      margin: 0 0 24px 0;
-      color: #222;
-      text-align: center;
+      font-size: 54px;
+      margin: 0 0 34px 0;
+      color: #111;
+      text-align: left;
+      font-weight: 500;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .cards {
@@ -242,6 +244,67 @@
       font-size: 19px;
       line-height: 1.8;
       margin: 10px 0;
+    }
+
+    /* ===== PUBLICATIONS ===== */
+    .pub-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pub-year {
+      font-size: 26px;
+      font-weight: 700;
+      color: #2f5be7;
+      margin: 12px 0 26px 0;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 34px;
+    }
+
+    .pub-item {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .pub-text {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #222;
+    }
+
+    .pub-number {
+      color: #2f5be7;
+      font-weight: 500;
+    }
+
+    .pub-title {
+      color: #111;
+      text-decoration: underline;
+    }
+
+    .pub-link {
+      color: #169c37;
+      font-weight: 500;
+    }
+
+    .pub-image img {
+      width: 100%;
+      max-width: 750px;
+      border: 2px solid #36b24a;
+      display: block;
+      background: #fff;
+    }
+
+    .pub-note {
+      font-size: 15px;
+      color: #666;
+      margin-top: 6px;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -308,6 +371,22 @@
       .intro p {
         font-size: 19px;
       }
+
+      .section h3 {
+        font-size: 38px;
+      }
+
+      .pub-text {
+        font-size: 16px;
+      }
+
+      .pub-year {
+        font-size: 22px;
+      }
+
+      .pub-image img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -371,40 +450,79 @@
         <h4>Scientific Machine Learning</h4>
         <p>Physics-informed neural networks, operator learning, and data-driven computational frameworks for biological systems.</p>
       </div>
+
       <div class="card">
         <h4>Multiscale Biological Modeling</h4>
         <p>Multiscale modeling of cells, tissues, and flows using mathematically grounded and computationally efficient approaches.</p>
       </div>
+
       <div class="card">
         <h4>Blood Flow and RBC Biomechanics</h4>
         <p>Hemodynamics, red blood cell mechanics, sickle cell disease, and predictive biomedical simulations.</p>
       </div>
-       <div class="card">
-  <h4>Biomedical device</h4>
-  <p>Mechanical thrombectomy devices for clot reduction and removal, with research focused on spinning-induced fibrin densification, clot volume shrinkage, and translational treatment design.</p>
-</div>
-<div class="card">
-  <h4>Intellegent theroputic phramework</h4>
-  <p>Spleen-on-a-chip models for red blood cell filtration, splenic function, and predictive therapeutic evaluation.</p>
-</div>
+
+      <div class="card">
+        <h4>Biomedical device</h4>
+        <p>Mechanical thrombectomy devices for clot reduction and removal, with research focused on spinning-induced fibrin densification, clot volume shrinkage, and translational treatment design.</p>
+      </div>
+
+      <div class="card">
+        <h4>Intellegent theroputic phramework</h4>
+        <p>Spleen-on-a-chip models for red blood cell filtration, splenic function, and predictive therapeutic evaluation.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" id="publications">
     <h3>Publications</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>Selected Paper 1</h4>
-        <p>AI-enabled quantification of overlapping red blood cell sickling dynamics in microfluidic assays.</p>
+
+    <div class="pub-wrapper">
+      <div class="pub-year">Year 2025:</div>
+
+      <div class="pub-list">
+        <div class="pub-item">
+          <div class="pub-text">
+            <span class="pub-number">[1]</span>
+            G. Li and collaborators.
+            <span class="pub-title">An AI-enabled tool for quantifying overlapping red blood cell sickling dynamics in microfluidic assays.</span>
+            Lab on a Chip, 2025.
+            <a href="#" class="pub-link">[Open Access]</a>
+          </div>
+          <div class="pub-image">
+            <img src="paper1.jpg" alt="Paper 1 figure">
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-text">
+            <span class="pub-number">[2]</span>
+            G. Li and collaborators.
+            <span class="pub-title">Clot Treatment via Spinning-Induced Fibrin Microstructure Densification and Clot Volume Reduction.</span>
+            2025.
+            <a href="#" class="pub-link">[Open Access]</a>
+          </div>
+          <div class="pub-image">
+            <img src="paper2.jpg" alt="Paper 2 figure">
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-text">
+            <span class="pub-number">[3]</span>
+            G. Li and collaborators.
+            <span class="pub-title">Spleen-on-a-chip modeling for red blood cell filtration and splenic function.</span>
+            2025.
+            <a href="#" class="pub-link">[Details]</a>
+          </div>
+          <div class="pub-image">
+            <img src="paper3.jpg" alt="Paper 3 figure">
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h4>Selected Paper 2</h4>
-        <p>Physics-informed and multiscale modeling for blood flow and cellular systems.</p>
-      </div>
-      <div class="card">
-        <h4>Selected Paper 3</h4>
-        <p>Additional publications, preprints, and collaborative work can be listed here.</p>
-      </div>
+
+      <p class="pub-note">
+        Replace <strong>paper1.jpg</strong>, <strong>paper2.jpg</strong>, and <strong>paper3.jpg</strong> with your actual publication figures. You can also update author lists, journal names, and links later.
+      </p>
     </div>
   </section>
 
@@ -415,10 +533,12 @@
         <h4>Guansheng Li</h4>
         <p>Principal Investigator, Department of Mathematics, Rowan University.</p>
       </div>
+
       <div class="card">
         <h4>Students</h4>
         <p>Information about current students, postdocs, and collaborators will be updated here.</p>
       </div>
+
       <div class="card">
         <h4>Collaborators</h4>
         <p>Cross-disciplinary collaborations in applied mathematics, biomedicine, and scientific AI.</p>
@@ -449,32 +569,29 @@
     </div>
   </section>
 
-<section class="section" id="join">
-  <h3>Join</h3>
+  <section class="section" id="join">
+    <h3>Join</h3>
+    <div class="contact-list">
+      <h4>Open Positions</h4>
 
-  <div class="contact-list">
+      <p>
+        The BioComp Group is seeking motivated PhD students and postdoctoral researchers
+        in areas including multiscale biological modeling, scientific machine learning,
+        blood flow, red blood cell biomechanics, and biomedical computation.
+      </p>
 
-    <h4>Open Positions</h4>
+      <p>
+        Applicants should have strong computational and programming skills, with backgrounds
+        in applied mathematics, computational science, fluid mechanics, physics, computer science,
+        biomedical engineering, or related disciplines. Experience in numerical methods,
+        scientific machine learning, or high-performance computing is a plus.
+      </p>
 
-    <p>
-      The BioComp Group is seeking motivated PhD students and postdoctoral researchers
-      in areas including multiscale biological modeling, scientific machine learning,
-      blood flow, red blood cell biomechanics, and biomedical computation.
-    </p>
-
-    <p>
-      Applicants should have strong computational and programming skills, with backgrounds
-      in applied mathematics, computational science, fluid mechanics, physics, computer science,
-      biomedical engineering, or related disciplines. Experience in numerical methods,
-      scientific machine learning, or high-performance computing is a plus.
-    </p>
-
-    <p>
-      To apply or inquire, please contact <strong>Prof. Guansheng Li</strong> at
-      <strong>your_email_here</strong> with your CV and a brief description of your research interests.
-    </p>
-
-  </div>
-</section>
+      <p>
+        To apply or inquire, please contact <strong>Prof. Guansheng Li</strong> at
+        <strong>your_email_here</strong> with your CV and a brief description of your research interests.
+      </p>
+    </div>
+  </section>
 </body>
 </html>
