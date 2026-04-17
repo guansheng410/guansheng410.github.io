@@ -444,6 +444,33 @@
   </div>
 </section>
 
+  <style>
+/* ===== 新增布局（关键）===== */
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 60px;
+}
+
+/* 左侧卡片固定宽度 */
+.hero-card {
+  flex: 0 0 720px;
+}
+
+/* 右侧图贴右 */
+.hero-research-figure {
+  margin-left: auto;
+}
+
+/* 控制科研图大小（核心！） */
+.hero-research-figure img {
+  width: auto;
+  max-width: 500px;
+  height: auto;
+}
+</style>
+
   <section class="intro">
     <h2>Multiscale Biological Computation and AI Group</h2>
     <p>
