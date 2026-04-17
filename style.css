@@ -108,4 +108,13 @@ a { text-decoration: none; }
 .card {
   background: white;
   padding: 25px;
+
+  /* ===== PUBLICATIONS IMAGE FIX ===== */
+.pub-image img {
+  width: 100%;
+  max-width: 500px;   /* ⭐ 核心：限制最大宽度 */
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
 }
