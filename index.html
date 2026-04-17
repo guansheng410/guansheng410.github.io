@@ -445,29 +445,31 @@
 </section>
 
   <style>
-/* ===== 新增布局（关键）===== */
 .hero-wrapper {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 60px;
+  gap: 40px;              /* 原来 60px，稍微收紧 */
+  padding: 30px 20px;     /* 给整体一点呼吸感 */
 }
 
-/* 左侧卡片固定宽度 */
 .hero-card {
-  flex: 0 0 720px;
+  flex: 0 0 470px;        /* 原来 720px 太宽了，现在按你截图更接近 470-500 */
 }
 
-/* 右侧图贴右 */
 .hero-research-figure {
-  margin-left: auto;
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0;         /* 去掉 auto，不然会推太远 */
 }
 
-/* 控制科研图大小（核心！） */
 .hero-research-figure img {
-  width: auto;
-  max-width: 500px;
+  width: 100%;
+  max-width: 620px;       /* 原来 500 太小了，建议 580~650 */
   height: auto;
+  display: block;
 }
 </style>
 
