@@ -53,7 +53,7 @@ a { text-decoration: none; }
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(90deg, #3a3a3a, #2f2f2f);
+  background: #000000;
   padding: 36px 20px;
 }
 
