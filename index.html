@@ -24,7 +24,6 @@
       text-decoration: none;
     }
 
-    /* ===== TOP HEADER ===== */
     .site-header {
       background: #f7f7f7;
       border-bottom: 1px solid #ddd;
@@ -108,28 +107,31 @@
       background: #444;
     }
 
-    /* ===== HERO ===== */
     .hero {
-      position: relative;
-      min-height: 520px;
-      background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)), url('hero_lab.jpg') center/cover no-repeat;
+      background: linear-gradient(90deg, #3a3a3a, #2f2f2f);
+      padding: 36px 20px;
+    }
+
+    .hero-wrapper {
       display: flex;
-      align-items: center;
-      padding: 48px 38px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .hero-card {
       background: rgba(255,255,255,0.97);
-      width: 760px;
-      max-width: 100%;
       padding: 34px 36px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+      flex: 0 0 470px;
     }
 
     .hero-content {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 28px;
     }
 
     .hero-text {
@@ -152,13 +154,9 @@
       font-weight: 600;
     }
 
-    .hero-image {
-      flex-shrink: 0;
-    }
-
     .hero-image img {
-      width: 180px;
-      height: 180px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #f0f0f0;
@@ -166,7 +164,20 @@
       display: block;
     }
 
-    /* ===== INTRO ===== */
+    .hero-research-figure {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .hero-research-figure img {
+      width: 100%;
+      max-width: 620px;
+      height: auto;
+      display: block;
+    }
+
     .intro {
       background: #f4f4f4;
       text-align: center;
@@ -188,141 +199,28 @@
       color: #222;
     }
 
-    /* ===== CONTENT ===== */
-    .section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 28px;
-    }
-
-    .section h3 {
-      font-size: 54px;
-      margin: 0 0 34px 0;
-      color: #111;
-      text-align: left;
-      font-weight: 500;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #e2e2e2;
-      padding: 28px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    }
-
-    .card h4 {
-      margin: 0 0 14px 0;
-      font-size: 22px;
-      color: #8c1515;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: 18px;
-      line-height: 1.7;
-      color: #333;
-    }
-
-    .contact-list {
-      max-width: 700px;
-      margin: 0 auto;
-      background: white;
-      padding: 30px;
-      border: 1px solid #e2e2e2;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    }
-
-    .contact-list p {
-      font-size: 19px;
-      line-height: 1.8;
-      margin: 10px 0;
-    }
-
-    /* ===== PUBLICATIONS ===== */
-    .pub-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .pub-year {
-      font-size: 26px;
-      font-weight: 700;
-      color: #2f5be7;
-      margin: 12px 0 26px 0;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    .pub-list {
-      display: flex;
-      flex-direction: column;
-      gap: 34px;
-    }
-
-    .pub-item {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .pub-text {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #222;
-    }
-
-    .pub-number {
-      color: #2f5be7;
-      font-weight: 500;
-    }
-
-    .pub-title {
-      color: #111;
-      text-decoration: underline;
-    }
-
-    .pub-link {
-      color: #169c37;
-      font-weight: 500;
-    }
-
-    .pub-image img {
-      width: 100%;
-      max-width: 750px;
-      border: 2px solid #36b24a;
-      display: block;
-      background: #fff;
-    }
-
-    .pub-note {
-      font-size: 15px;
-      color: #666;
-      margin-top: 6px;
-    }
-
-    /* ===== RESPONSIVE ===== */
     @media (max-width: 1000px) {
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
       .intro p {
         font-size: 21px;
+      }
+
+      .hero-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-card {
+        flex: none;
+        width: 100%;
+        max-width: 760px;
+      }
+
+      .hero-research-figure {
+        justify-content: center;
       }
     }
 
     @media (max-width: 900px) {
-      .hero-card {
-        width: 100%;
-      }
-
       .hero-content {
         flex-direction: column;
         text-align: center;
@@ -352,7 +250,6 @@
       }
 
       .hero {
-        min-height: 430px;
         padding: 24px 18px;
       }
 
@@ -372,19 +269,7 @@
         font-size: 19px;
       }
 
-      .section h3 {
-        font-size: 38px;
-      }
-
-      .pub-text {
-        font-size: 16px;
-      }
-
-      .pub-year {
-        font-size: 22px;
-      }
-
-      .pub-image img {
+      .hero-research-figure img {
         max-width: 100%;
       }
     }
@@ -404,74 +289,41 @@
     </div>
 
     <nav class="top-nav">
-      <a href="#home" class="active">Home</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#people">People</a>
-      <a href="#news">News</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#photos">Lab Photos</a>
-      <a href="#join">Join</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="people.html">People</a>
+      <a href="news.html">News</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="photos.html">Lab Photos</a>
+      <a href="join.html">Join</a>
     </nav>
   </header>
 
-<section class="hero" id="home">
-  <div class="hero-wrapper">
-    
-    <!-- 左侧：原来的白色卡片 -->
-    <div class="hero-card">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Welcome to the research group website of Professor Li</h1>
-          <p>
-            Our research develops mathematically grounded and computationally efficient
-            frameworks for multiscale biological systems, integrating applied mathematics,
-            scientific machine learning, and computation for biomedical discovery.
-          </p>
-        </div>
+  <section class="hero" id="home">
+    <div class="hero-wrapper">
+      <div class="hero-card">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Welcome to the research group website of Professor Li</h1>
+            <p>
+              Our research develops mathematically grounded and computationally efficient
+              frameworks for multiscale biological systems, integrating applied mathematics,
+              scientific machine learning, and computation for biomedical discovery.
+            </p>
+          </div>
 
-        <div class="hero-image">
-          <img src="Guansheng_Li.jpg" alt="Guansheng Li">
+          <div class="hero-image">
+            <img src="Guansheng_Li.jpg" alt="Guansheng Li">
+          </div>
         </div>
       </div>
+
+      <div class="hero-research-figure">
+        <img src="Homepage.png" alt="Research Overview">
+      </div>
     </div>
-
-
-    <div class="hero-research-figure">
-      <img src="Homepage.png" alt="Research Overview">
-    </div>
-
-  </div>
-</section>
-
-  <style>
-.hero-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 40px;              /* 原来 60px，稍微收紧 */
-  padding: 30px 20px;     /* 给整体一点呼吸感 */
-}
-
-.hero-card {
-  flex: 0 0 470px;        /* 原来 720px 太宽了，现在按你截图更接近 470-500 */
-}
-
-.hero-research-figure {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 0;         /* 去掉 auto，不然会推太远 */
-}
-
-.hero-research-figure img {
-  width: 100%;
-  max-width: 620px;       /* 原来 500 太小了，建议 580~650 */
-  height: auto;
-  display: block;
-}
-</style>
+  </section>
 
   <section class="intro">
     <h2>Multiscale Biological Computation and AI Group</h2>
@@ -480,489 +332,6 @@
       and biomedical data analysis, we study blood flow, red blood cell biomechanics,
       disease-related dynamics, and interpretable predictive models for biological systems.
     </p>
-  </section>
-
-  <section class="section" id="research">
-    <h3>Research</h3>
-    <div class="cards">
-      <div class="card">
-        <h4>Scientific Machine Learning</h4>
-        <p>Physics-informed neural networks, operator learning, and data-driven computational frameworks for biological systems.</p>
-      </div>
-
-      <div class="card">
-        <h4>Multiscale Biological Modeling</h4>
-        <p>Multiscale modeling of cells, tissues, and flows using mathematically grounded and computationally efficient approaches.</p>
-      </div>
-
-      <div class="card">
-        <h4>Blood Flow and RBC Biomechanics</h4>
-        <p>Hemodynamics, red blood cell mechanics, sickle cell disease, and predictive biomedical simulations.</p>
-      </div>
-
-      <div class="card">
-        <h4>Biomedical device</h4>
-        <p>Mechanical thrombectomy devices for clot reduction and removal, with research focused on spinning-induced fibrin densification, clot volume shrinkage, and translational treatment design.</p>
-      </div>
-
-      <div class="card">
-        <h4>Intellegent theroputic phramework</h4>
-        <p>Spleen-on-a-chip models for red blood cell filtration, splenic function, and predictive therapeutic evaluation.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="publications">
-  <h3>Publications</h3>
-
-  <div class="pub-wrapper">
-
-    <!-- ===== 2026 ===== -->
-    <div class="pub-year">2026</div>
-    <div class="pub-list">
-
-      <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>
-          N Kadivar, <strong>G Li(equal first author)</strong><sup>*</sup>, J Zheng, M Dao, GE Karniadakis, M Xu.
-          <span class="pub-title">
-            An AI-enabled tool for quantifying overlapping red blood cell sickling dynamics in microfluidic assays.
-          </span>
-          arXiv:2601.17703, 2026.
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2026Figure1.jpg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-    </div>
-
-
-    <!-- ===== 2025 ===== -->
-    <div class="pub-year">2025</div>
-    <div class="pub-list">
-
-<div class="pub-item">
-  <div class="pub-text">
-    <span class="pub-number">[2]</span>
-    Z Chai, <strong>G Li</strong><sup>*</sup>, PA Ndour, P Connes, PA Buffet, M Franco, GE Karniadakis.
-    <span class="pub-title">
-      In silico biophysics and rheology of blood and red blood cells in Gaucher Disease.
-    </span>
-    PLoS Computational Biology, 21(9): e1012705, 2025.
-    <a href="#" class="pub-link">[Open Access]</a>
-  </div>
-  <div class="pub-image">
-    <img src="2025Figure1.PNG" alt="Paper 2 figure">
-  </div>
-</div>
-
-<div class="pub-item">
-  <div class="pub-text">
-    <span class="pub-number">[2]</span>
-    Y Chang, <strong>G Li</strong><sup>*</sup>, J Sim, GE Karniadakis, RR Zhao
-    <span class="pub-title">
-     Clot Treatment via Spinning-Induced Fibrin Microstructure Densification and Clot Volume Reduction.
-    </span>
-    Extreme Mechanics Letters (2025): 102391.
-    <a href="#" class="pub-link">[Open Access]</a>
-  </div>
-  <div class="pub-image">
-    <img src="2025Figure2.jpg" alt="Paper 2 figure">
-  </div>
-</div>
-
-    </div>
-
-     <!-- ===== 2024 ===== -->
-    <div class="pub-year">2024</div>
-    <div class="pub-list">
-
-      <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>       
-          <strong>Guansheng Li</strong><sup>*</sup>, He Li, Papa alioune Ndour, Mélanie Franco, Xuejin Li, Ian MacDonald, Ming Dao, Pierre A Buffet, George Em Karniadakis.
-          <span class="pub-title">
-            Red blood cell passage through deformable interendothelial slits in the spleen: Insights into splenic filtration and hemodynamics.
-          </span>
-          Computers in biology and medicine 182 (2024): 109198.
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2024Figure1.jpg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-        <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>                
-          Yu Zhang, Yuhao Qiang, He Li, <strong>Guansheng Li</strong><sup>*</sup>, Lu Lu, Ming Dao, George E Karniadakis, Aleksander S Popel, Chen Zhao
-          <span class="pub-title">
-            Signaling-biophysical modeling unravels mechanistic control of red blood cell phagocytosis by macrophages in sickle cell disease.
-          </span>
-          PNAS nexus 3.2 (2024): pgae031.
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2024Figure2.jpeg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-    </div>
-
-
-     <!-- ===== 2023 ===== -->
-    <div class="pub-year">2023</div>
-    <div class="pub-list">
-
-      <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>       
-        
-          <strong>G Li</strong><sup>*</sup>, Y Qiang, H Li, X Li, PA Buffet, M Dao, GE Karniadakis
-          <span class="pub-title">
-            A combined computational and experimental investigation of the filtration function of splenic macrophages in sickle cell disease.
-          </span>
-          PLOS Computational Biology 19 (12), e1011223
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2023Figure1.PNG" alt="Paper 1 figure">
-        </div>
-      </div>
-
-        <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>           
-
-          <strong>G Li</strong><sup>*</sup>, T Ye, Z Xia, S Wang, Z Zhu.
-          <span class="pub-title">
-            Analysis and prediction of hematocrit in microvascular networks.
-          </span>
-          International Journal of Engineering Science 191, 103901
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2023Figure2.jpg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-              <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>           
-Ander Dorken-Gallastegi, Yao Lee, <strong>Guansheng Li</strong><sup>*</sup>, He Li, Leon Naar, Xuejin Li, Ting Ye, Elizabeth Van Cott, Rachel Rosovsky, David Gregory, Ronald Tompkins, George Karniadakis, Haytham MA Kaafarani, George C Velmahos, Jarone Lee, Galit H Frydman
-
-          <span class="pub-title">
-            Circulating cellular clusters are associated with thrombotic complications and clinical outcomes in COVID-19.
-          </span>
-          Iscience 26 (7)
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2023Figure3.jpg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-
-        <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>           
-          <strong>G Li</strong><sup>*</sup>, Y Qiang, H Li, X Li, M Dao, GE Karniadakis
-
-          <span class="pub-title">
-            In silico and in vitro study of the adhesion dynamics of erythrophagocytosis in sickle cell disease.
-          </span>
-          Biophysical Journal 122 (12), 2590-2604
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2023Figure4.jpg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-
-              <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>       
-         
-           <strong>G Li</strong><sup>*</sup>, T Ye, B Yang, S Wang, X Li
-          <span class="pub-title">
-          Temporal-spatial heterogeneity of hematocrit in microvascular networks.
-          </span>
-         Physics of Fluids 35 (2)
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2023Figure5.jpeg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-    </div>
-
-
-
-         <!-- ===== 2021 ===== -->
-    <div class="pub-year">2021</div>
-    <div class="pub-list">
-
-      <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>                
-          S Wang, T Ye, <strong>Guansheng Li</strong><sup>*</sup>, X Zhang, H Shi
-          <span class="pub-title">
-            Margination and adhesion dynamics of tumor cells in a real microvascular network.
-          </span>
-         PLoS Computational Biology 17 (2), e1008746
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2021Figure1.PNG" alt="Paper 1 figure">
-        </div>
-      </div>
-
-    </div>
-
-
-             <!-- ===== 2020 ===== -->
-    <div class="pub-year">2020</div>
-    <div class="pub-list">
-
-      <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>                
-          
-          T Ye, X Zhang, <strong>Guansheng Li</strong><sup>*</sup>, S Wang
-          <span class="pub-title">
-            Biomechanics in thrombus formation from direct cellular simulations.
-          </span>
-         Physical Review E 102 (4), 042410
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2020Figure1.png" alt="Paper 1 figure">
-        </div>
-      </div>
-
-            <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>                
-          <strong>Guansheng Li</strong><sup>*</sup>, T Ye, S Wang, X Li, R UI Haq
-     
-          <span class="pub-title">
-           Numerical design of a highly efficient microfluidic chip for blood plasma separation.
-          </span>
-         Physics of Fluids 32 (3), 031903
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2020Figure2.jpeg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-
-                  <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>                
-       
-      <strong>Guansheng Li</strong><sup>*</sup>, T Ye, X Li.
-          <span class="pub-title">
-           Parallel modeling of cell suspension flow in complex micro-networks with inflow/outflow boundary conditions.
-          </span>
-         Journal of Computational Physics 401, 109031.
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2020Figure3.jpg" alt="Paper 1 figure">
-        </div>
-      </div>
-
-
-    </div>
-
-
-                 <!-- ===== 2019 ===== -->
-    <div class="pub-year">2019</div>
-    <div class="pub-list">
-
-      <div class="pub-item">
-        <div class="pub-text">
-          <span class="pub-number">[1]</span>                
-          T Ye, L Peng, <strong>Guansheng Li</strong><sup>*</sup>.
-                    <span class="pub-title">
-            Red blood cell distribution in a microvascular network with successive bifurcations.
-          </span>
-         Biomechanics and modeling in mechanobiology 18 (6), 1821-1835
-          <a href="#" class="pub-link">[Open Access]</a>
-        </div>
-        <div class="pub-image">
-          <img src="2019Figure1.png" alt="Paper 1 figure">
-        </div>
-      </div>
-    </div>
-
-
-
-
-  </div>
-</section>
-
-<section class="section" id="people">
-  <h3>People</h3>
-  <div class="cards">
-
-<div class="card profile-card">
-  <div class="profile-container">
-
-    <!-- Photo -->
-    <div class="profile-photo">
-      <img src="Guansheng_Li.jpg" alt="Guansheng Li">
-    </div>
-
-    <!-- Name -->
-    <h2 class="name">Guansheng Li</h2>
-
-    <!-- Title -->
-    <p class="profile-title">
-      Incoming Assistant Professor<br>
-      Department of Mathematics<br>
-      Rowan University<br>
-      <span class="date">(Starting 09/2026)</span>
-    </p>
-
-    <!-- Timeline -->
-    <div class="timeline-section">
-      <h4>Academic Timeline</h4>
-      <ul class="timeline">
-        <li><strong>2026– :</strong> Assistant Professor, Rowan University</li>
-        <li><strong>2025–2026:</strong> Research Associate, Brown University</li>
-        <li><strong>2021–2025:</strong> Postdoctoral Research Associate, Brown University</li>
-        <li><strong>2021:</strong> Research Assistant, Zhejiang University</li>
-        <li><strong>2018–2021:</strong> Ph.D., Jilin University</li>
-        <li><strong>2015–2018:</strong> M.Sc., Jilin University</li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-<style>
-/* ⭐ 改成纵向布局 */
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Photo */
-.profile-photo img {
-  width: 220px;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  margin-bottom: 15px;
-}
-
-/* Name */
-.name {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #8c1515;
-}
-
-/* Title */
-.profile-title {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.profile-title .date {
-  color: #777;
-  font-size: 14px;
-}
-
-/* Timeline */
-.timeline-section {
-  width: 100%;
-  max-width: 420px;
-  text-align: left;
-}
-
-.timeline-section h4 {
-  color: #8c1515;
-  margin-bottom: 10px;
-}
-
-.timeline {
-  padding-left: 18px;
-  line-height: 1.6;
-}
-
-.timeline li {
-  margin-bottom: 6px;
-}
-</style>
-
-    <div class="card">
-      <h4>Students</h4>
-      <p>
-        The group is currently building. We are actively recruiting PhD students researchers in scientific machine learning, multiscale modeling, 
-        and biomedical computation.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-  <section class="section" id="news">
-    <h3>News</h3>
-    <div class="contact-list">
-      <p>• The BioComp Group website is under development.</p>
-      <p>• Openings for students interested in scientific machine learning and biomedical computation.</p>
-      <p>• Updates on publications, grants, and talks will be posted here.</p>
-    </div>
-  </section>
-
-  <section class="section" id="teaching">
-    <h3>Teaching</h3>
-    <div class="contact-list">
-      <p>Course information, lecture materials, and mentoring activities will be shared here.</p>
-    </div>
-  </section>
-
-  <section class="section" id="photos">
-    <h3>Lab Photos</h3>
-    <div class="contact-list">
-      <p>You can later add lab photos, group pictures, conference snapshots, and outreach images here.</p>
-    </div>
-  </section>
-
-  <section class="section" id="join">
-    <h3>Join</h3>
-    <div class="contact-list">
-      <h4>Open Positions</h4>
-
-      <p>
-        The BioComp Group is seeking motivated PhD students in areas including multiscale biological modeling, scientific machine learning,
-        blood flow, red blood cell biomechanics, and biomedical computation.
-      </p>
-
-      <p>
-        Applicants should have strong computational and programming skills, with backgrounds
-        in applied mathematics, computational science, fluid mechanics, physics, computer science,
-        biomedical engineering, or related disciplines. Experience in numerical methods,
-        scientific machine learning, or high-performance computing is a plus.
-      </p>
-
-      <p>
-        To apply or inquire, please contact <strong>Prof. Guansheng Li</strong> at
-        <strong>guansheng_li@brown.edu</strong> with your CV and a brief description of your research interests.
-      </p>
-    </div>
   </section>
 </body>
 </html>
