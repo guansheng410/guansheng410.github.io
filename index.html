@@ -775,25 +775,30 @@ Ander Dorken-Gallastegi, Yao Lee, <strong>Guansheng Li</strong><sup>*</sup>, He 
 <div class="card profile-card">
   <div class="profile-container">
 
+    <!-- Photo -->
     <div class="profile-photo">
       <img src="Guansheng_Li.jpg" alt="Guansheng Li">
     </div>
 
+    <!-- Info -->
     <div class="profile-info">
-      <h4>Guansheng Li</h4>
+      <h2 class="name">Guansheng Li</h2>
 
       <p class="profile-title">
-        Incoming Assistant Professor, Department of Mathematics, Rowan University (09/2026)
+        Incoming Assistant Professor<br>
+        Department of Mathematics<br>
+        Rowan University<br>
+        <span class="date">(Starting 09/2026)</span>
       </p>
 
-      <h5>Academic Timeline</h5>
-      <ul>
-        <li><strong>09/2026:</strong> Assistant Professor, Rowan University</li>
-        <li><strong>07/2025 – 08/2026:</strong> Research Associate, Brown University</li>
-        <li><strong>11/2021 – 07/2025:</strong> Postdoctoral Research Associate, Brown University</li>
-        <li><strong>09/2021 – 11/2021:</strong> Research Assistant, Zhejiang University</li>
-        <li><strong>09/2018 – 06/2021:</strong> Ph.D., Jilin University</li>
-        <li><strong>09/2015 – 07/2018:</strong> M.Sc., Jilin University</li>
+      <h4>Academic Timeline</h4>
+      <ul class="timeline">
+        <li><strong>2026– :</strong> Assistant Professor, Rowan University</li>
+        <li><strong>2025–2026:</strong> Research Associate, Brown University</li>
+        <li><strong>2021–2025:</strong> Postdoctoral Research Associate, Brown University</li>
+        <li><strong>2021:</strong> Research Assistant, Zhejiang University</li>
+        <li><strong>2018–2021:</strong> Ph.D., Jilin University</li>
+        <li><strong>2015–2018:</strong> M.Sc., Jilin University</li>
       </ul>
     </div>
 
@@ -804,25 +809,46 @@ Ander Dorken-Gallastegi, Yao Lee, <strong>Guansheng Li</strong><sup>*</sup>, He 
 .profile-container {
   display: flex;
   align-items: flex-start;
-  gap: 25px;
+  gap: 30px;
 }
 
+/* Photo bigger */
 .profile-photo img {
-  width: 160px;
-  height: 200px;
+  width: 190px;
+  height: 240px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-.profile-info {
-  flex: 1;
+/* Name stronger */
+.name {
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #8c1515;
 }
 
+/* Title cleaner */
 .profile-title {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.profile-title .date {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Timeline spacing */
+.timeline {
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.timeline li {
+  margin-bottom: 6px;
 }
 </style>
 
