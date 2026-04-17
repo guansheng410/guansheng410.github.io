@@ -780,17 +780,19 @@ Ander Dorken-Gallastegi, Yao Lee, <strong>Guansheng Li</strong><sup>*</sup>, He 
       <img src="Guansheng_Li.jpg" alt="Guansheng Li">
     </div>
 
-    <!-- Info -->
-    <div class="profile-info">
-      <h2 class="name">Guansheng Li</h2>
+    <!-- Name -->
+    <h2 class="name">Guansheng Li</h2>
 
-      <p class="profile-title">
-        Incoming Assistant Professor<br>
-        Department of Mathematics<br>
-        Rowan University<br>
-        <span class="date">(Starting 09/2026)</span>
-      </p>
+    <!-- Title -->
+    <p class="profile-title">
+      Incoming Assistant Professor<br>
+      Department of Mathematics<br>
+      Rowan University<br>
+      <span class="date">(Starting 09/2026)</span>
+    </p>
 
+    <!-- Timeline -->
+    <div class="timeline-section">
       <h4>Academic Timeline</h4>
       <ul class="timeline">
         <li><strong>2026– :</strong> Assistant Professor, Rowan University</li>
@@ -806,34 +808,37 @@ Ander Dorken-Gallastegi, Yao Lee, <strong>Guansheng Li</strong><sup>*</sup>, He 
 </div>
 
 <style>
+/* ⭐ 改成纵向布局 */
 .profile-container {
   display: flex;
-  align-items: flex-start;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-/* Photo bigger */
+/* Photo */
 .profile-photo img {
-  width: 190px;
-  height: 240px;
+  width: 220px;
+  height: 260px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
 }
 
-/* Name stronger */
+/* Name */
 .name {
-  font-size: 26px;
-  margin-bottom: 8px;
+  font-size: 28px;
+  margin-bottom: 10px;
   color: #8c1515;
 }
 
-/* Title cleaner */
+/* Title */
 .profile-title {
   font-size: 16px;
   color: #444;
-  line-height: 1.5;
-  margin-bottom: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .profile-title .date {
@@ -841,7 +846,18 @@ Ander Dorken-Gallastegi, Yao Lee, <strong>Guansheng Li</strong><sup>*</sup>, He 
   font-size: 14px;
 }
 
-/* Timeline spacing */
+/* Timeline */
+.timeline-section {
+  width: 100%;
+  max-width: 420px;
+  text-align: left;
+}
+
+.timeline-section h4 {
+  color: #8c1515;
+  margin-bottom: 10px;
+}
+
 .timeline {
   padding-left: 18px;
   line-height: 1.6;
