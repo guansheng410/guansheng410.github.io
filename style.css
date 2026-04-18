@@ -111,10 +111,9 @@ a { text-decoration: none; }
 
   /* ===== PUBLICATIONS IMAGE FIX ===== */
 .pub-image img {
-  width: 100%;
-  max-width: 500px;   /* ⭐ 核心：限制最大宽度 */
+  width: 220px;       /* ⭐ 控制图片大小（核心） */
   height: auto;
-  display: block;
-  margin-top: 10px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 }
