@@ -315,6 +315,52 @@ a {
     flex: none;
   }
 
+  /* ===== PEOPLE PAGE FIX ===== */
+
+/* 控制整个卡片不要太宽 */
+.profile-card {
+  max-width: 320px;
+  padding: 25px;
+}
+
+/* 居中布局 */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ⭐ 核心：控制照片大小 */
+.profile-photo img {
+  width: 200px;          /* ← 关键参数 */
+  aspect-ratio: 3/4;     /* ← 保持比例 */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* 名字 */
+.name {
+  font-size: 26px;
+  margin: 10px 0;
+  color: #8c1515;
+}
+
+/* 职位 */
+.profile-title {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* timeline */
+.timeline-section {
+  width: 100%;
+  text-align: left;
+  margin-top: 15px;
+}
+
   .pub-image img {
     width: 100%;
     max-width: 320px;
