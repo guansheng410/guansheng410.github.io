@@ -58,7 +58,7 @@ a {
 
 .hero-wrapper {
   display: flex;
-  gap: 48px;
+  gap: 50px;
   max-width: 1400px;
   margin: 0 auto;
   align-items: center;
@@ -66,9 +66,9 @@ a {
 
 .hero-card {
   background: #ffffff;
-  padding: 34px 34px 30px;
+  padding: 26px 28px 24px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
-  flex: 0 0 620px;
+  flex: 0 0 580px;
 }
 
 .hero-content {
@@ -84,7 +84,7 @@ a {
 }
 
 .hero-content h1 {
-  font-size: 44px;
+  font-size: 39px;
   line-height: 1.12;
   margin: 0 0 24px 0;
   font-weight: 700;
@@ -103,8 +103,8 @@ a {
 }
 
 .hero-image img {
-  width: 190px;
-  height: 270px;
+  width: 170px;
+  height: 240px;
   object-fit: cover;
   border-radius: 50% / 42%;
   display: block;
@@ -118,7 +118,7 @@ a {
 
 .hero-research-figure img {
   width: 100%;
-  max-width: 760px;
+  max-width: 900px;
   height: auto;
   display: block;
   background: transparent;
