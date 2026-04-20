@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home | BioComp Group</title>
+  <title>People | BioComp Group</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,10 +14,10 @@
   </div>
 
   <nav class="top-nav">
-    <a href="index.html" class="active">Home</a>
+    <a href="index.html">Home</a>
     <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
-    <a href="people.html">People</a>
+    <a href="people.html" class="active">People</a>
     <a href="news.html">News</a>
     <a href="teaching.html">Teaching</a>
     <a href="photos.html">Lab Photos</a>
@@ -25,42 +25,52 @@
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-wrapper">
+<section class="section" id="people">
+  <h3>People</h3>
 
-    <div class="hero-card">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Welcome to Professor Li’s BioComp Group</h1>
-          <p>
-            We develop mathematically grounded and computationally efficient
-            frameworks for multiscale biological systems, integrating applied
-            mathematics, scientific machine learning, and computation for
-            biomedical discovery.
-          </p>
+  <div class="cards people-grid">
+
+    <div class="card profile-card">
+      <div class="profile-container">
+        <div class="profile-photo">
+          <img src="Guansheng_Li.jpg" alt="Guansheng Li">
         </div>
 
-        <div class="hero-image">
-          <img src="Guansheng_Li.jpg" alt="Guansheng Li">
+        <div class="profile-info">
+          <h2 class="name">Guansheng Li</h2>
+
+          <p class="profile-title">
+            Incoming Assistant Professor<br>
+            Department of Mathematics<br>
+            Rowan University<br>
+            <span class="date">(Starting 09/2026)</span>
+          </p>
+
+          <div class="timeline-section">
+            <h4>Academic Timeline</h4>
+            <ul class="timeline">
+              <li><strong>2026–present:</strong> Assistant Professor, Rowan University</li>
+              <li><strong>2025–2026:</strong> Research Associate, Brown University</li>
+              <li><strong>2021–2025:</strong> Postdoctoral Research Associate, Brown University</li>
+              <li><strong>2021:</strong> Research Assistant, Zhejiang University</li>
+              <li><strong>2018–2021:</strong> Ph.D., Jilin University</li>
+              <li><strong>2015–2018:</strong> M.Sc., Jilin University</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="hero-research-figure">
-      <img src="Homepage.png" alt="Research overview">
+    <div class="card people-info-card">
+      <h4>Students</h4>
+      <p>
+        The group is currently building. We are actively recruiting PhD students
+        and student researchers in scientific machine learning, multiscale modeling,
+        and biomedical computation.
+      </p>
     </div>
 
   </div>
-</section>
-
-<section class="section intro-section">
-  <h3>Multiscale Biological Computation and AI Group</h3>
-  <p class="intro-text">
-    We integrate analytical modeling, scientific machine learning, multiscale simulation, and biomedical 
-    data analysis to advance the quantitative understanding of blood flow, red blood cell biomechanics, 
-    disease-related processes, and interpretable predictive models for biological systems.
-    
-  </p>
 </section>
 
 </body>
