@@ -521,3 +521,24 @@ a {
     font-size: 22px;
   }
 }
+
+.photo-placeholder {
+  text-align: center;
+  padding: 80px 40px;
+}
+
+.photo-placeholder h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #8c1515;
+}
+
+.photo-text {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.photo-subtext {
+  font-size: 16px;
+  color: #666;
+}
