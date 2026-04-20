@@ -169,80 +169,6 @@ a {
   display: block;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1200px) {
-  .hero-wrapper {
-    flex-direction: column;
-  }
-
-  .hero-card {
-    flex: none;
-    width: 100%;
-  }
-
-  .hero-research-figure img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .site-header {
-    padding: 16px 20px 12px;
-  }
-
-  .site-title {
-    font-size: 24px;
-  }
-
-  .site-title .school {
-    font-size: 28px;
-  }
-
-  .top-nav {
-    gap: 16px;
-    margin-top: 14px;
-  }
-
-  .top-nav a {
-    font-size: 16px;
-  }
-
-  .hero {
-    padding: 24px 16px;
-  }
-
-  .hero-card {
-    padding: 18px;
-  }
-
-  .hero-content {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-
-  .hero-content h1 {
-    font-size: 30px;
-  }
-
-  .hero-content p {
-    font-size: 17px;
-    max-width: 100%;
-  }
-
-  .hero-image img {
-    width: 140px;
-    height: 210px;
-  }
-
-  .section h3 {
-    font-size: 36px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* ===== PUBLICATIONS PAGE ===== */
 .pub-wrapper {
   display: flex;
@@ -303,7 +229,107 @@ a {
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== PEOPLE PAGE ===== */
+.people-grid {
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+}
+
+.profile-card {
+  padding: 30px;
+}
+
+.profile-container {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  flex: 0 0 220px;
+}
+
+.profile-photo img {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.name {
+  font-size: 30px;
+  margin: 0 0 12px 0;
+  color: #8c1515;
+  line-height: 1.2;
+}
+
+.profile-title {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #444;
+  margin: 0 0 18px 0;
+}
+
+.profile-title .date {
+  color: #666;
+  font-style: italic;
+}
+
+.timeline-section {
+  margin-top: 8px;
+}
+
+.timeline-section h4 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  color: #222;
+}
+
+.timeline {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+.timeline li {
+  margin-bottom: 6px;
+}
+
+.people-info-card h4 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #8c1515;
+}
+
+.people-info-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .hero-wrapper {
+    flex-direction: column;
+  }
+
+  .hero-card {
+    flex: none;
+    width: 100%;
+  }
+
+  .hero-research-figure img {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -315,55 +341,101 @@ a {
     flex: none;
   }
 
-  /* ===== PEOPLE PAGE FIX ===== */
-
-/* 控制整个卡片不要太宽 */
-.profile-card {
-  max-width: 320px;
-  padding: 25px;
-}
-
-/* 居中布局 */
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* ⭐ 核心：控制照片大小 */
-.profile-photo img {
-  width: 200px;          /* ← 关键参数 */
-  aspect-ratio: 3/4;     /* ← 保持比例 */
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-}
-
-/* 名字 */
-.name {
-  font-size: 26px;
-  margin: 10px 0;
-  color: #8c1515;
-}
-
-/* 职位 */
-.profile-title {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #444;
-}
-
-/* timeline */
-.timeline-section {
-  width: 100%;
-  text-align: left;
-  margin-top: 15px;
-}
-
   .pub-image img {
     width: 100%;
     max-width: 320px;
     height: auto;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    flex: none;
+  }
+
+  .timeline-section {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 16px 20px 12px;
+  }
+
+  .site-title {
+    font-size: 24px;
+  }
+
+  .site-title .school {
+    font-size: 28px;
+  }
+
+  .top-nav {
+    gap: 16px;
+    margin-top: 14px;
+  }
+
+  .top-nav a {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 24px 16px;
+  }
+
+  .hero-card {
+    padding: 18px;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+    max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 140px;
+    height: 210px;
+  }
+
+  .section h3 {
+    font-size: 36px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo img {
+    width: 180px;
+    height: 230px;
+  }
+
+  .name {
+    font-size: 26px;
+  }
+
+  .profile-title,
+  .people-info-card p,
+  .timeline {
+    font-size: 15px;
   }
 }
